@@ -1,6 +1,8 @@
 precision highp float;
 varying vec2 uv;
 
+#define mult .66
+
 uniform sampler2D overlay;
 uniform sampler2D background;
 
@@ -16,7 +18,9 @@ void main() {
 	vec4 smp = texture2D(background, uv);
 	vec4 ovl = texture2D(overlay, uv);
 
-	vec3 col = blendDifference(smp.xyz, ovl.xyz, ovl.a);
+	vec3 col = blendDifference(smp.xyz, ovl.xyz*vec3(mult), ovl.a);
+
+	col = mix(col.xyz, col.xyz / mult, ovl.a);
 
 	gl_FragColor = vec4(col.xyz, 1.0);
 }

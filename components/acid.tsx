@@ -32,7 +32,7 @@ export const Acid = ({ width, height, refreshRate = 60 }) => {
 			<FunkyRenderer overlay={() => imageRef.current}>
 				<ShaderToy refreshRate={refreshRate} shader={shader} width={width * pixelRatio}
 				           height={height * pixelRatio}
-				           color={uniformRGB('rgb(102,25,25)')}/>
+				           color={uniformRGB('rgb(102,89,25)')}/>
 			</FunkyRenderer>
 		</Surface>
 	)
