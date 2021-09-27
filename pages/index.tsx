@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 			<footer className={styles.footer}>
 				Ether by <a target="_blank" rel="noreferrer"
 				            href="https://www.shadertoy.com/user/nimitz">nimitz</a> (c) 2014
-				<a target="_blank" rel="license"
+				<a target="_blank" rel="noreferrer"
 				   href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
 					<img
 						alt="Creative Commons License"
